@@ -20,6 +20,13 @@ class SimpleTimer {
     }
 
     countdown() {
-        this.value -= 1;
+        if (this.value === 0) {
+            return false;
+        } else {
+            this.value -= 1;
+            return true;
+        }
     }
 }
+
+export default SimpleTimer;
