@@ -1,6 +1,6 @@
 class PartialTimer {
     constructor (value) {
-        parseValue(value);
+        this.parseValue(value);
     }
 
     parseValue(value) {
@@ -26,7 +26,7 @@ class PartialTimer {
 
     countHour() {
         if (this.hours === 0) {
-            countDay();
+            this.countDay();
             this.hours = 23;
         } else {
             this.hours -= 1;
@@ -35,7 +35,7 @@ class PartialTimer {
 
     countMinute() {
         if (this.minutes === 0) {
-            countHour();
+            this.countHour();
             this.minutes = 59;
         } else {
             this.minutes -= 1;
@@ -53,7 +53,7 @@ class PartialTimer {
 
     countdown() {
         try {
-            countSecond();
+            this.countSecond();
             return true;
         } catch (e) {
             return false;
