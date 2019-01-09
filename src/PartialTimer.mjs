@@ -1,6 +1,6 @@
 class PartialTimer {
     constructor (value) {
-        this.value = value;
+        parseValue(value);
     }
 
     parseValue(value) {
