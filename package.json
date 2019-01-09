@@ -1,7 +1,6 @@
 {
     "scripts": {
-        "build": "babel src/PartialTimer.mjs -d lib",
-        "test": "mocha --compilers js:@babel/register"
+        "test": "mocha --require @babel/register"
     },
     "devDependencies": {
         "@babel/cli": "^7.2.3",
