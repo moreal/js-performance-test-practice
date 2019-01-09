@@ -9,5 +9,21 @@
         "@babel/preset-es2015": "^7.0.0-beta.53",
         "@babel/register": "^7.0.0"
     },
-    "dependencies": {}
+    "dependencies": {},
+    "babel": {
+        "presets": [
+            [
+                "@babel/env",
+                {
+                    "targets": {
+                    "edge": "17",
+                    "firefox": "60",
+                    "chrome": "67",
+                    "safari": "11.1"
+                    },
+                    "useBuiltIns": "usage"
+                }
+            ]
+        ]
+    }
 }
