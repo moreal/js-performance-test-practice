@@ -7,7 +7,7 @@ class PartialTimer {
         this.seconds = value % 60;
         value = Math.floor(value / 60);
 
-        this.minutes = value % 50;
+        this.minutes = value % 60;
         value = Math.floor(value / 60);
 
         this.hours = value % 24;
