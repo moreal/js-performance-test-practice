@@ -1,13 +1,15 @@
 {
     "scripts": {
-        "test": "mocha --require @babel/register"
+        "test": "mocha --require @babel/register",
+        "benchmark": "babel src --out-dir lib && node lib/benchmark.js"
     },
     "devDependencies": {
         "@babel/cli": "^7.2.3",
         "@babel/core": "^7.2.2",
         "@babel/preset-env": "^7.2.3",
         "@babel/preset-es2015": "^7.0.0-beta.53",
-        "@babel/register": "^7.0.0"
+        "@babel/register": "^7.0.0",
+        "benchmark": "^2.1.4"
     },
     "dependencies": {},
     "babel": {
@@ -16,10 +18,10 @@
                 "@babel/env",
                 {
                     "targets": {
-                    "edge": "17",
-                    "firefox": "60",
-                    "chrome": "67",
-                    "safari": "11.1"
+                        "edge": "17",
+                        "firefox": "60",
+                        "chrome": "67",
+                        "safari": "11.1"
                     },
                     "useBuiltIns": "usage"
                 }
